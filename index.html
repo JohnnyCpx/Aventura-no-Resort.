@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort Paradise Caribe - Sua Aventura Tropical</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .passo {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .passo.ativo {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .texto-container {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 10px 5px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-reiniciar {
+            background: #4ecdc4;
+        }
+
+        .btn-reiniciar:hover {
+            background: #3dbeb5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Introdução -->
+        <div class="passo ativo" id="passo-0">
+            <h1>✨ Resort Paradise Caribe ✨</h1>
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Resort luxuoso no Caribe">
+            <div class="texto-container">
+                <p>Você acaba de chegar ao <strong>Resort Paradise Caribe</strong>, um paraíso de águas cristalinas e
+                    praias de areia branca. O lugar é ainda mais incrível do que você imaginava!</p>
+                <p>Enquanto faz check-in, o recepcionista sussurra: <em>"Temos um mistério aqui... Dizem que um tesouro
+                        perdido está escondido em alguma parte do resort. Quer investigar?"</em></p>
+            </div>
+            <button class="btn-proximo" data-proximo="1">Sim, quero aventura!</button>
+            <button class="btn-proximo" data-proximo="2">Não, só quero relaxar</button>
+        </div>
+
+        <!-- Aceita a aventura -->
+        <div class="passo" id="passo-1">
+            <img src="https://images.unsplash.com/photo-1538964173425-93884d739596?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Vista do resort à noite">
+            <div class="texto-container">
+                <p>Você recebe um mapa antigo com pistas. A primeira indica: <em>"Onde o sol se põe sobre as palmeiras,
+                        há uma passagem secreta."</em></p>
+                <p>O resort tem dois lugares famosos pelo pôr do sol:</p>
+            </div>
+            <button class="btn-proximo" data-proximo="3">Praia dos Coqueiros</button>
+            <button class="btn-proximo" data-proximo="4">Mirante do Farol</button>
+        </div>
+
+        <!-- Recusa a aventura -->
+        <div class="passo" id="passo-2">
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Piscina de borda infinita">
+            <div class="texto-container">
+                <p>Você decide ignorar o mistério e aproveitar o resort. Massagens, drinks tropicais e dias na piscina
+                    fazem desta uma viagem perfeita.</p>
+                <p>Mas, no último dia, você vê um grupo de hóspedes animados com um baú antigo... Será que era real?</p>
+            </div>
+            <button class="btn-reiniciar">Arrependi-me! Quero tentar de novo</button>
+        </div>
+
+        <!-- Praia dos Coqueiros -->
+        <div class="passo" id="passo-3">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Praia ao pôr do sol">
+            <div class="texto-container">
+                <p>Na Praia dos Coqueiros, você encontra uma garrafa enterrada na areia. Dentro, há uma mensagem:
+                    <em>"Siga onde as conchas formam uma flecha."</em></p>
+                <p>Você olha ao redor e vê duas possibilidades:</p>
+            </div>
+            <button class="btn-proximo" data-proximo="5">Caverna da Praia</button>
+            <button class="btn-proximo" data-proximo="6">Pier dos Pescadores</button>
+        </div>
+
+        <!-- Mirante do Farol -->
+        <div class="passo" id="passo-4">
+            <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Farol à beira-mar">
+            <div class="texto-container">
+                <p>No Mirante do Farol, você encontra uma placa antiga com símbolos estranhos. Um guia local diz:
+                    <em>"Isso aponta para um lugar escondido no resort."</em></p>
+                <p>Onde você quer investigar?</p>
+            </div>
+            <button class="btn-proximo" data-proximo="7">Jardim Tropical</button>
+            <button class="btn-proximo" data-proximo="8">Spa Escondido</button>
+        </div>
+
+        <!-- Caverna da Praia -->
+        <div class="passo" id="passo-5">
+            <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Caverna tropical">
+            <div class="texto-container">
+                <p>Dentro da caverna, você encontra um baú antigo... mas está trancado! Há uma inscrição: <em>"A chave
+                        está onde os pássaros cantam ao amanhecer."</em></p>
+                <p>Você sabe que o resort tem um aviário...</p>
+            </div>
+            <button class="btn-proximo" data-proximo="9">Ir ao Aviário</button>
+            <button class="btn-proximo" data-proximo="10">Procurar outra pista</button>
+        </div>
+
+        <!-- Pier dos Pescadores -->
+        <div class="passo" id="passo-6">
+            <img src="https://images.unsplash.com/photo-1437482078695-73e7ca421423?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Pier à beira-mar">
+            <div class="texto-container">
+                <p>No pier, um pescador idoso entrega a você uma chave dourada. <em>"Muitos procuraram, mas você parece
+                        digno."</em></p>
+                <p>Agora, você só precisa descobrir onde usá-la!</p>
+            </div>
+            <button class="btn-proximo" data-proximo="11">Voltar à caverna</button>
+            <button class="btn-proximo" data-proximo="12">Explorar o resort</button>
+        </div>
+
+        <!-- Jardim Tropical -->
+        <div class="passo" id="passo-7">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Jardim tropical">
+            <div class="texto-container">
+                <p>No Jardim Tropical, você encontra um pavão que parece estar seguindo você. De repente, ele cisca a
+                    terra e revela uma pequena chave dourada!</p>
+                <p>Agora, você só precisa descobrir onde usá-la...</p>
+            </div>
+            <button class="btn-proximo" data-proximo="13">Voltar ao Mirante</button>
+            <button class="btn-proximo" data-proximo="14">Procurar um baú</button>
+        </div>
+
+        <!-- Spa Escondido -->
+        <div class="passo" id="passo-8">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Spa luxuoso">
+            <div class="texto-container">
+                <p>Você entra no Spa Escondido e encontra uma massagista que diz conhecer a lenda do tesouro. Ela
+                    entrega um pergaminho: <em>"O tesouro está onde o sol toca a água às 17h."</em></p>
+                <p>Isso só pode ser a Praia do Oeste!</p>
+            </div>
+            <button class="btn-proximo" data-proximo="15">Ir para a Praia do Oeste</button>
+        </div>
+
+        <!-- Aviário -->
+        <div class="passo" id="passo-9">
+            <img src="https://images.unsplash.com/photo-1551085254-e96b210db58a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Aviário tropical">
+            <div class="texto-container">
+                <p>No Aviário, um tucano rouba seu chapéu e voa para um ninho. Quando você recupera o chapéu, encontra
+                    uma chave escondida nele!</p>
+                <p>Agora, você pode voltar para abrir o baú na caverna.</p>
+            </div>
+            <button class="btn-proximo" data-proximo="16">Voltar à caverna</button>
+        </div>
+
+        <!-- Procurar outra pista -->
+        <div class="passo" id="passo-10">
+            <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Farol à beira-mar">
+            <div class="texto-container">
+                <p>Você decide ignorar o aviário e volta ao Mirante do Farol. Lá, encontra um turista que diz ter visto
+                    algo brilhando na água...</p>
+            </div>
+            <button class="btn-proximo" data-proximo="17">Investigar a água</button>
+            <button class="btn-proximo" data-proximo="18">Voltar ao início</button>
+        </div>
+
+        <!-- Final do Tesouro (Caverna) -->
+        <div class="passo" id="passo-11">
+            <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Tesouro em moedas douradas">
+            <div class="texto-container">
+                <p>Você abre o baú e encontra <strong>moedas de ouro, joias antigas e um mapa de ilhas
+                        desconhecidas!</strong> O gerente do resort explica que esse tesouro pertenceu a um pirata do
+                    século XVIII.</p>
+                <p>Como recompensa, você ganha uma estadia vitalícia no Paradise Caribe!</p>
+            </div>
+            <button class="btn-reiniciar">Jogar novamente</button>
+        </div>
+
+        <!-- Final Alternativo (Praia do Oeste) -->
+        <div class="passo" id="passo-15">
+            <img src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Praia ao pôr do sol">
+            <div class="texto-container">
+                <p>Na Praia do Oeste, você escava onde o sol toca a água e encontra um cofre antigo. Dentro, há um
+                    diário de bordo de um pirata e um colar de esmeraldas!</p>
+                <p>Você se torna uma lenda no resort!</p>
+            </div>
+            <button class="btn-reiniciar">Jogar novamente</button>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const botoes = document.querySelectorAll('.btn-proximo, .btn-reiniciar');
+
+            botoes.forEach(botao => {
+                botao.addEventListener('click', function () {
+                    const passoAtual = this.closest('.passo');
+                    const proximoPassoId = this.getAttribute('data-proximo');
+
+                    if (proximoPassoId) {
+                        const proximoPasso = document.getElementById(`passo-${proximoPassoId}`);
+                        passoAtual.classList.remove('ativo');
+                        proximoPasso.classList.add('ativo');
+                    } else if (this.classList.contains('btn-reiniciar')) {
+                        location.reload();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
